@@ -6,53 +6,71 @@
 
     <title>Sakura Ramen</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Raleway:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <header class="page-header">
       <div class="header-content">
-        <div class="logo">
-          <img src="./assets/img/logo.png" alt="Sakura Ramen Logo" />
-        </div>
-        <nav class="main-nav">
-          <a href="#menu">Menu</a>
-          <a href="#location">Location</a>
-          <a href="#about">About</a>
-        </nav>
-        <a href="">
-          <img src="" alt="" />
-          <span>0176 54564534</span>
+        <a href="#" class="logo">
+          <img src="./assets/img/logo.png" alt="Sakura Ramen - Home" />
         </a>
+
+        <div class="header-actions">
+          <nav class="main-nav" aria-label="Main Navigation">
+            <a href="#menu">Menu</a>
+            <a href="#locations">Locations</a>
+            <a href="#about">About</a>
+          </nav>
+
+          <a href="tel:+4917654564534" class="phone-btn">
+            <img src="./assets/icons/call.png" alt="Phone" />
+            <span>0176 54564534</span>
+          </a>
+        </div>
       </div>
     </header>
+
     <main>
       <section class="hero">
-        <div class="hero-overlay">
-          <h1>Sakura Ramen</h1>
-          <p>The best ramen in town</p>
+        <div class="hero-content">
+          <h1>SAKURA RAMEN</h1>
+          <p>THE BEST RAMEN IN TOWN</p>
         </div>
       </section>
+
       <section class="order-section">
         <h2>How to order</h2>
         <div class="order-steps">
           <div class="order-step">
-            <img src="" alt="" />
-            <p></p>
+            <img src="./assets/icons/noodle.png" alt="Bowl of noodles" />
+            <h3>Pick your noodle</h3>
           </div>
           <div class="order-step">
-            <img src="" alt="" />
-            <p></p>
+            <img src="./assets/icons/broth.png" alt="Bowl of broth" />
+            <h3>Pick your broth</h3>
           </div>
           <div class="order-step">
-            <img src="" alt="" />
-            <p></p>
+            <img src="./assets/icons/egg.png" alt="Egg topping" />
+            <h3>Add your toppings</h3>
           </div>
         </div>
       </section>
+
       <section id="menu" class="menu-section"></section>
       <section id="location" class="location-section"></section>
     </main>
+
     <footer class="page-footer"></footer>
   </body>
 </html>

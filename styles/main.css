@@ -1,37 +1,206 @@
 /* =========================
    1. Design Tokens
-   - colors
-   - font families
-   - font sizes
-   - spacing
 ========================= */
+:root {
+  --color-white: #ffffff;
+  --color-wine: #9f0908;
+  --color-black: #000000;
+  --font-primary: "Raleway", sans-serif;
+  --font-secondary: "Economica", sans-serif;
+}
 
 /* =========================
    2. Global Base
-   - html
-   - body
-   - headings
-   - paragraphs
 ========================= */
+body {
+  font-family: var(--font-primary);
+}
 
 /* =========================
    3. Reusable Layout
-   - container
-   - section spacing
-   - buttons
 ========================= */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
 /* =========================
    4. Header
 ========================= */
+.page-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.header-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 160px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.main-nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.8;
+}
+
+.phone-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 232px;
+  padding: 10px 16px;
+  gap: 8px;
+  background-color: var(--color-wine);
+  border: 1px solid var(--color-white);
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--color-white);
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  transition: opacity 0.3s ease;
+}
+
+.phone-btn:hover {
+  opacity: 0.85;
+}
+
+.phone-btn img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
 
 /* =========================
    5. Hero
 ========================= */
+.hero {
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  background-image: url("../assets/img/Hero-img.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: -160px;
+}
+
+.hero-content h1 {
+  color: var(--color-white);
+  margin: 0;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 1;
+}
+
+.hero-content p {
+  color: var(--color-white);
+  margin: 0;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1;
+}
 
 /* =========================
    6. How To Order
 ========================= */
+.order-section {
+  width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px;
+}
+
+.order-section h2 {
+  color: var(--color-wine);
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 1;
+  text-transform: uppercase;
+  margin: 0;
+  text-align: center;
+}
+
+.order-steps {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.order-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 80px;
+}
+
+.order-step img {
+  width: 128px;
+  height: 120px;
+  object-fit: contain;
+}
+
+.order-step h3 {
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1;
+  color: var(--color-black);
+  margin: 0;
+  width: 192px;
+}
 
 /* =========================
    7. Menu
@@ -47,8 +216,6 @@
 
 /* =========================
    10. States
-   - hover
-   - focus
 ========================= */
 
 /* =========================
