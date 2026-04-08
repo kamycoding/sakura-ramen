@@ -5,6 +5,8 @@
   --color-white: #ffffff;
   --color-wine: #9f0908;
   --color-black: #000000;
+  --color-gray: #675e54;
+  --color-dark-blue: rgba(10, 20, 30, 1);
   --font-primary: "Raleway", sans-serif;
   --font-secondary: "Economica", sans-serif;
 }
@@ -112,7 +114,7 @@ main {
 ========================= */
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 1024px;
   min-height: 800px;
   background-image: url("../assets/img/Hero-img.jpg");
   background-size: cover;
@@ -128,7 +130,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: -160px;
+  margin-top: -360px;
 }
 
 .hero-content h1 {
@@ -183,7 +185,7 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 80px;
+  gap: 16px;
 }
 
 .order-step img {
@@ -205,11 +207,141 @@ main {
 /* =========================
    7. Menu
 ========================= */
+.menu-section {
+  width: 100%;
+  background-image: url("../assets/img/bg-menu.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 126px 0 152px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.menu-section h2 {
+  color: var(--color-wine);
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 96px;
+  text-transform: uppercase;
+}
+
+.menu-container {
+  width: 965px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.menu-item.reverse {
+  flex-direction: row-reverse;
+}
+
+.dish-img img {
+  width: 343px;
+  height: auto;
+}
+
+.dish-info {
+  width: 542px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dish-info h3 {
+  font-family: var(--font-secondary);
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.price-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-gray);
+}
 /* =========================
    8. Location
 ========================= */
 
+.location-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 96px;/
+}
+
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 96px; 
+  width: 100%;
+}
+
+.address-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.address-info h2 {
+  color: var(--color-wine);
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1; 
+  margin: 0;
+}
+
+.wrapper-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.wrapper-title img {
+  width: 32px;
+  height: 40px;
+  object-fit: contain;
+}
+
+address {
+  color: var(--color-black);
+  font-size: 40px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1;
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.map-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 /* =========================
    9. Footer
 ========================= */
