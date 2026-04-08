@@ -94,7 +94,7 @@ main {
   text-decoration: none;
   color: var(--color-white);
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.1;
   font-weight: 400;
   transition: opacity 0.3s ease;
 }
@@ -139,6 +139,7 @@ main {
   font-weight: 700;
   font-size: 96px;
   line-height: 1;
+  height: 124px;
 }
 
 .hero-content p {
@@ -153,10 +154,12 @@ main {
    6. How To Order
 ========================= */
 .order-section {
-  width: 1120px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 160px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 96px;
 }
@@ -176,7 +179,7 @@ main {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -186,6 +189,7 @@ main {
   align-items: center;
   text-align: center;
   gap: 16px;
+  padding: 32px;
 }
 
 .order-step img {
@@ -223,6 +227,7 @@ main {
   font-size: 80px;
   font-weight: 700;
   margin-bottom: 96px;
+  line-height: 100%;
   text-transform: uppercase;
 }
 
@@ -259,6 +264,7 @@ main {
   font-family: var(--font-secondary);
   font-size: 56px;
   font-weight: 700;
+  line-height: 64px;
   margin: 0;
 }
 
@@ -273,6 +279,7 @@ main {
   justify-content: space-between;
   font-size: 32px;
   font-weight: 700;
+  line-height: 100%;
   color: var(--color-gray);
 }
 /* =========================
@@ -284,14 +291,14 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 96px;/
+  margin-bottom: 96px;
 }
 
 .location-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 96px; 
+  gap: 96px;
   width: 100%;
 }
 
@@ -307,7 +314,7 @@ main {
   font-size: 80px;
   font-weight: 700;
   text-transform: uppercase;
-  line-height: 1; 
+  line-height: 1;
   margin: 0;
 }
 
@@ -345,7 +352,40 @@ address {
 /* =========================
    9. Footer
 ========================= */
+.page-footer {
+  width: 100%;
+  background-color: var(--color-dark-blue);
+  padding: 48px 160px;
+}
 
+.footer-content {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 48px;
+  object-fit: contain;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.social-links img {
+  width: 48px;
+  height: 48px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+}
 /* =========================
    10. States
 ========================= */
