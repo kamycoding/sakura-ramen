@@ -29,19 +29,23 @@
   <body>
     <header class="page-header">
       <div class="header-content">
-        <a href="#" class="logo">
-          <img src="./assets/img/logo.png" alt="Sakura Ramen - Home" />
+        <a href="#" class="logo" aria-label="Sakura Ramen Home">
+          <img src="./assets/img/logo.png" alt="Sakura Ramen logo" />
         </a>
 
         <div class="header-actions">
-          <nav class="main-nav" aria-label="Main Navigation">
+          <nav class="main-nav" aria-label="Main navigation">
             <a href="#menu">Menu</a>
-            <a href="#location">Locations</a>
-            <a href="#about">About</a>
+            <a href="#location">Location</a>
+            <a href="#">About</a>
           </nav>
 
-          <a href="tel:+4917654564534" class="phone-btn">
-            <img src="./assets/icons/call.png" alt="Phone Icon" />
+          <a
+            href="tel:+4917654564534"
+            class="phone-btn"
+            aria-label="Call Sakura Ramen"
+          >
+            <img src="./assets/icons/call.png" alt="" />
             <span>0176 54564534</span>
           </a>
         </div>
@@ -58,15 +62,18 @@
 
       <section class="order-section">
         <h2>How to order</h2>
+
         <div class="order-steps">
           <div class="order-step">
             <img src="./assets/icons/noodle.png" alt="Noodle selection" />
             <h3>Pick your noodle</h3>
           </div>
+
           <div class="order-step">
             <img src="./assets/icons/broth.png" alt="Broth selection" />
             <h3>Pick your broth</h3>
           </div>
+
           <div class="order-step">
             <img src="./assets/icons/egg.png" alt="Toppings selection" />
             <h3>Add your toppings</h3>
@@ -75,23 +82,29 @@
       </section>
 
       <section id="menu" class="menu-section">
-        <h2>OUR MENU</h2>
+        <h2>Our menu</h2>
+
         <div class="menu-container">
           <article class="menu-item">
             <div class="dish-img">
               <img src="./assets/img/dish1.png" alt="Delicious Tonkasu Ramen" />
             </div>
+
             <div class="dish-info">
               <h3>Tonkasu Ramen</h3>
+
               <div class="price-list">
                 <div class="price-row">
-                  <span>CHICKEN</span><span>11.95€</span>
+                  <span>CHICKEN</span>
+                  <span>11.95€</span>
                 </div>
                 <div class="price-row">
-                  <span>BEEF</span><span>12.95€</span>
+                  <span>BEEF</span>
+                  <span>12.95€</span>
                 </div>
                 <div class="price-row">
-                  <span>SHRIMP</span><span>13.95€</span>
+                  <span>SHRIMP</span>
+                  <span>13.95€</span>
                 </div>
               </div>
             </div>
@@ -101,17 +114,22 @@
             <div class="dish-img">
               <img src="./assets/img/dish2.png" alt="Spicy Miso Ramen" />
             </div>
+
             <div class="dish-info">
               <h3>Spicy Miso Ramen</h3>
+
               <div class="price-list">
                 <div class="price-row">
-                  <span>CHICKEN</span><span>11.95€</span>
+                  <span>CHICKEN</span>
+                  <span>11.95€</span>
                 </div>
                 <div class="price-row">
-                  <span>BEEF</span><span>12.95€</span>
+                  <span>BEEF</span>
+                  <span>12.95€</span>
                 </div>
                 <div class="price-row">
-                  <span>SHRIMP</span><span>13.95€</span>
+                  <span>SHRIMP</span>
+                  <span>13.95€</span>
                 </div>
               </div>
             </div>
@@ -121,17 +139,22 @@
             <div class="dish-img">
               <img src="./assets/img/dish3.png" alt="Shio Ramen" />
             </div>
+
             <div class="dish-info">
               <h3>Shio Ramen</h3>
+
               <div class="price-list">
                 <div class="price-row">
-                  <span>CHICKEN</span><span>11.95€</span>
+                  <span>CHICKEN</span>
+                  <span>11.95€</span>
                 </div>
                 <div class="price-row">
-                  <span>BEEF</span><span>12.95€</span>
+                  <span>BEEF</span>
+                  <span>12.95€</span>
                 </div>
                 <div class="price-row">
-                  <span>SHRIMP</span><span>13.95€</span>
+                  <span>SHRIMP</span>
+                  <span>13.95€</span>
                 </div>
               </div>
             </div>
@@ -143,6 +166,7 @@
         <div class="location-content">
           <div class="address-info">
             <h2>Find us at</h2>
+
             <div class="wrapper-title">
               <img src="./assets/icons/location-icon.png" alt="Map pin icon" />
               <address>Kapuzinerstraße 31, München, 80337</address>
@@ -162,43 +186,39 @@
 
     <footer class="page-footer">
       <div class="footer-content">
-        <div class="footer-logo">
+        <a href="#" class="footer-logo" aria-label="Sakura Ramen Home">
           <img
             src="./assets/icons/footer-logo.png"
-            alt="Sakura Ramen Footer Logo"
+            alt="Sakura Ramen footer logo"
           />
-        </div>
+        </a>
 
         <div class="social-links">
           <a
             href="https://www.tripadvisor.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Sakura Ramen on TripAdvisor"
           >
-            <img
-              src="./assets/icons/tripadvisor.png"
-              alt="Follow us on TripAdvisor"
-            />
+            <img src="./assets/icons/tripadvisor.png" alt="TripAdvisor icon" />
           </a>
+
           <a
             href="https://www.facebook.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Sakura Ramen on Facebook"
           >
-            <img
-              src="./assets/icons/facebook.png"
-              alt="Visit our Facebook page"
-            />
+            <img src="./assets/icons/facebook.png" alt="Facebook icon" />
           </a>
+
           <a
             href="https://www.instagram.com/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Visit Sakura Ramen on Instagram"
           >
-            <img
-              src="./assets/icons/instagram.png"
-              alt="See our photos on Instagram"
-            />
+            <img src="./assets/icons/instagram.png" alt="Instagram icon" />
           </a>
         </div>
       </div>
