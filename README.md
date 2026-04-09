@@ -30,19 +30,6 @@ The goal of this project was to translate a complex Figma design into a fully fu
 - **CSS3** (Flexbox, CSS Variables, Transitions)
 - **Google Fonts** (Raleway & Economica)
 
-## 📂 Folder Structure
-
-```text
-sakura-ramen/
-├── assets/
-│   ├── icons/       # UI Icons (SVG/PNG)
-│   ├── img/         # Optimized high-res images
-│   └── faveIcons/   # Browser favicon set
-├── styles/
-│   ├── main.css     # Refactored core styles (Design Tokens)
-│   └── reset.css    # Browser normalization
-└── index.html       # Primary entry point``
-
 🔧 Local Setup
 Clone or download the repository.
 
@@ -56,4 +43,17 @@ A significant portion of the development was dedicated to Refactoring. By centra
 Developer: Kamyar Zamanfar
 
 GitHub: @kamycoding
-```
+
+## 📂 Folder Structure
+
+`````text
+sakura-ramen/
+├── assets/
+│   ├── icons/       # UI Icons (SVG/PNG)
+│   ├── img/         # Optimized high-res images
+│   └── faveIcons/   # Browser favicon set
+├── styles/
+│   ├── main.css     # Refactored core styles (Design Tokens)
+│   └── reset.css    # Browser normalization
+└── index.html       # Primary entry point````
+`````
