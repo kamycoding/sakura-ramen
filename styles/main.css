@@ -1,15 +1,31 @@
-/* 1. Design Tokens */
+/* =========================
+
+   1. Design Tokens
+
+========================= */
+
 :root {
   --color-white: #ffffff;
+
   --color-wine: #9f0908;
+
   --color-black: #000000;
+
   --color-gray: #675e54;
+
   --color-dark-blue: rgba(10, 20, 30, 1);
+
   --font-primary: "Raleway", sans-serif;
+
   --font-secondary: "Economica", sans-serif;
 }
 
-/* 2. Global Base */
+/* =========================
+
+   2. Global Base
+
+========================= */
+
 html {
   scroll-behavior: smooth;
 }
@@ -19,92 +35,155 @@ body {
   overflow-x: hidden;
 }
 
-/* 3. Reusable Layout */
+/* =========================
+
+   3. Reusable Layout
+
+========================= */
+
 main {
   display: flex;
+
   flex-direction: column;
+
   gap: 120px;
+
   max-width: 1440px;
+
   margin: 0 auto;
 }
 
-/* 4. Header */
+/* =========================
+
+   4. Header
+
+========================= */
+
 .page-header {
   width: 100%;
+
   position: absolute;
+
   top: 0;
+
   left: 0;
+
   z-index: 100;
 }
 
 .header-content {
   max-width: 1440px;
+
   margin: 0 auto;
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
+
   padding: 38px 160px;
 }
 
 .header-actions {
   display: flex;
+
   align-items: center;
+
   gap: 40px;
 }
 
 .logo img {
   width: 64px;
+
   height: 64px;
+
   object-fit: contain;
 }
 
 .main-nav {
   display: flex;
+
   gap: 40px;
+
   align-items: center;
 }
 
 .main-nav a {
+  text-decoration: none;
+
   color: var(--color-white);
+
   font-size: 24px;
+
   font-weight: 400;
+
   line-height: 28px;
+
   display: inline-block;
+
   text-transform: uppercase;
+
   position: relative;
 }
 
 .main-nav a::after {
   content: "";
+
   position: absolute;
+
   left: 0;
+
   bottom: 0;
+
   width: 100%;
+
   height: 2px;
+
   background-color: var(--color-white);
+
   transform: scaleX(0);
+
   transform-origin: bottom right;
+
   transition: transform 0.3s ease-out;
 }
 
 .main-nav a:hover::after {
   transform: scaleX(1);
+
   transform-origin: bottom left;
 }
 
 .phone-btn {
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   width: 232px;
+
   padding: 10px 16px;
+
   gap: 8px;
+
   background-color: var(--color-wine);
+
   border: 1px solid var(--color-white);
+
   border-radius: 10px;
+
+  text-decoration: none;
+
   color: var(--color-white);
+
   font-size: 24px;
+
   line-height: 1.1;
+
+  font-weight: 400;
+
   transition: opacity 0.3s ease;
 }
 
@@ -114,21 +193,25 @@ main {
 
 .phone-btn img {
   width: 24px;
+
   height: 24px;
+
   object-fit: contain;
 }
 
-/* 5. Hero */
+/* =========================
+   5. Hero
+========================= */
 .hero {
   width: 100%;
-  height: 1024px;
+  min-height: 100vh;
   background-image: url("../assets/img/Hero-img.jpg");
   background-size: cover;
-  background-position: center bottom;
-  position: relative;
+  background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 24px;
 }
 
 .hero-content {
@@ -136,7 +219,8 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: -300px;
+  width: min(100%, 960px);
+  padding: 0 24px;
 }
 
 .hero-content h1 {
@@ -153,86 +237,151 @@ main {
   line-height: 1;
   margin-top: 8px;
 }
+/* =========================
 
-/* 6. How To Order */
+   6. How To Order
+
+========================= */
+
 .order-section {
   width: 100%;
+
   max-width: 1440px;
+
   padding: 0 160px;
+
   display: flex;
+
   flex-direction: column;
+
+  justify-content: center;
+
   align-items: center;
+
   gap: 96px;
 }
 
 .order-section h2 {
   color: var(--color-wine);
+
+  font-family: var(--font-primary);
+
   font-weight: 700;
+
   font-size: 80px;
+
   line-height: 1;
+
   text-transform: uppercase;
+
+  margin: 0;
+
+  text-align: center;
 }
 
 .order-steps {
   width: 100%;
+
   display: flex;
+
+  flex-direction: row;
+
   justify-content: space-between;
+
+  align-items: flex-start;
 }
 
 .order-step {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   text-align: center;
+
   gap: 16px;
-  flex: 1;
+
+  padding: 32px;
 }
 
 .order-step img {
   width: 128px;
+
   height: 120px;
+
   object-fit: contain;
 }
 
 .order-step h3 {
   font-family: var(--font-secondary);
+
   font-weight: 700;
+
   font-size: 56px;
+
   line-height: 1;
+
   color: var(--color-black);
-  max-width: 200px;
+
+  margin: 0;
+
+  width: 192px;
 }
 
-/* 7. Menu */
+/* =========================
+
+   7. Menu
+
+========================= */
+
 .menu-section {
   width: 100%;
+
   background-image: url("../assets/img/bg-menu.jpg");
+
   background-size: cover;
+
   background-position: center;
-  padding: 120px 0;
+
+  padding: 126px 0 152px 0;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 }
 
 .menu-section h2 {
   color: var(--color-wine);
+
   font-size: 80px;
+
   font-weight: 700;
+
   margin-bottom: 96px;
+
+  line-height: 100%;
+
   text-transform: uppercase;
 }
 
 .menu-container {
   width: 965px;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 90px;
 }
 
 .menu-item {
   display: flex;
+
   align-items: center;
+
   gap: 56px;
 }
 
@@ -242,132 +391,212 @@ main {
 
 .dish-img img {
   width: 343px;
+
   height: auto;
 }
 
 .dish-info {
-  flex: 1;
+  width: 542px;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 24px;
 }
 
 .dish-info h3 {
   font-family: var(--font-secondary);
+
   font-size: 56px;
+
   font-weight: 700;
-  line-height: 1;
+
+  line-height: 64px;
+
+  margin: 0;
 }
 
 .price-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 16px;
 }
 
 .price-row {
   display: flex;
+
   justify-content: space-between;
+
   font-size: 32px;
+
   font-weight: 700;
+
+  line-height: 100%;
+
   color: var(--color-gray);
 }
 
-/* 8. Location */
+/* =========================
+
+   8. Location
+
+========================= */
+
 .location-section {
   width: 100%;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
-  padding-bottom: 96px;
+
+  margin-bottom: 96px;
 }
 
 .location-content {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 96px;
+
   width: 100%;
 }
 
 .address-info {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 24px;
 }
 
 .address-info h2 {
   color: var(--color-wine);
+
   font-size: 80px;
+
   font-weight: 700;
+
   text-transform: uppercase;
+
   line-height: 1;
+
+  margin: 0;
 }
 
 .wrapper-title {
   display: flex;
+
   align-items: center;
+
   gap: 20px;
 }
 
 .wrapper-title img {
   width: 32px;
+
   height: 40px;
+
+  object-fit: contain;
 }
 
 address {
   color: var(--color-black);
+
   font-size: 40px;
+
   font-weight: 400;
+
   font-style: normal;
+
   line-height: 1;
 }
 
 .map-wrapper {
   width: 100%;
+
   height: 600px;
+
   overflow: hidden;
 }
 
 .map-img {
   width: 100%;
+
   height: 100%;
+
   object-fit: cover;
 }
 
-/* 9. Footer */
+/* =========================
+
+   9. Footer
+
+========================= */
+
 .page-footer {
   width: 100%;
+
   background-color: var(--color-dark-blue);
+
   padding: 48px 160px;
 }
 
 .footer-content {
   max-width: 1440px;
+
   margin: 0 auto;
+
   display: flex;
+
   justify-content: space-between;
+
   align-items: center;
 }
 
 .footer-logo img {
   height: 48px;
+
   object-fit: contain;
 }
 
 .social-links {
   display: flex;
+
   gap: 16px;
+
   align-items: center;
 }
 
 .social-links img {
   width: 48px;
+
   height: 48px;
+
   transition: transform 0.3s ease;
 }
 
 .social-links img:hover {
   transform: scale(1.1);
 }
+
+/* =========================
+
+   10. States
+
+========================= */
+
+/* =========================
+
+   11. Responsive
+
+========================= */
