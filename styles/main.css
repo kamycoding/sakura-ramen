@@ -32,7 +32,6 @@ html {
 
 body {
   font-family: var(--font-primary);
-  overflow-x: hidden;
 }
 
 /* =========================
@@ -205,13 +204,14 @@ main {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background-image: url("../assets/img/Hero-img.jpg");
+  background-image: url("../assets/img/hero-bg.jpg");
   background-size: cover;
   background-position: center center;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 24px;
+  overflow: hidden;
 }
 
 .hero-content {
@@ -293,15 +293,10 @@ main {
 
 .order-step {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   text-align: center;
-
   gap: 16px;
-
   padding: 32px;
 }
 
@@ -591,12 +586,6 @@ address {
 
 /* =========================
 
-   10. States
-
-========================= */
-
-/* =========================
-
-   11. Responsive
+    Responsive
 
 ========================= */
