@@ -326,9 +326,10 @@ main {
 }
 
 .price-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto;
   align-items: center;
-  justify-content: space-between;
+  column-gap: 24px;
   color: var(--color-gray);
   font-size: 32px;
   font-weight: 700;
@@ -563,25 +564,18 @@ address {
   display: none;
 }
 
-/* =========================
-   12. Responsive Design
-========================= */
-
-/* =========================
-   BREAKPOINT: 1200px
-========================= */
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   :root {
     --page-padding-x: 120px;
     --section-gap: 96px;
     --section-title-size: 64px;
     --hero-title-size: 72px;
+    --hero-text-size: 22px;
     --nav-gap: 24px;
     --order-gap: 72px;
     --location-gap: 72px;
   }
 
-  /* Header */
   .main-nav a {
     font-size: 20px;
   }
@@ -592,7 +586,6 @@ address {
     font-size: 20px;
   }
 
-  /* Order */
   .order-step img {
     width: 100px;
     height: 93px;
@@ -602,7 +595,6 @@ address {
     font-size: 44px;
   }
 
-  /* Menu */
   .menu-container {
     gap: 64px;
   }
@@ -624,12 +616,10 @@ address {
     font-size: 24px;
   }
 
-  /* Location */
   address {
     font-size: 32px;
   }
 
-  /* Footer */
   .footer-logo-desktop {
     height: 40px;
   }
