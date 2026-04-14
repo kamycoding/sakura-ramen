@@ -40,7 +40,6 @@ html {
 }
 
 body {
-  margin: 0;
   font-family: var(--font-primary);
   color: var(--color-black);
   background-color: var(--color-white);
@@ -70,7 +69,6 @@ main {
 .order-section h2,
 .menu-section h2,
 .address-info h2 {
-  margin: 0;
   color: var(--section-title-color);
   font-size: var(--section-title-size);
   font-weight: var(--section-title-weight);
@@ -93,12 +91,10 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding-top: var(--header-padding-y);
   padding-right: var(--page-padding-x);
   padding-bottom: var(--header-padding-y);
   padding-left: var(--page-padding-x);
-  box-sizing: border-box;
 }
 
 .header-actions {
@@ -181,7 +177,6 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
   min-height: 100vh;
   padding: 0 24px;
   overflow: hidden;
@@ -195,7 +190,6 @@ main {
   flex-direction: column;
   align-items: center;
   width: min(100%, 960px);
-  padding: 0 24px;
   text-align: center;
 }
 
@@ -217,38 +211,29 @@ main {
 /* =========================
    6. How To Order
 ========================= */
-.order-section {
-  width: 100%;
-}
 
 .order-section .content-shell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: none;
-  margin: 0;
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
-  box-sizing: border-box;
   gap: var(--order-gap);
 }
-
 .order-section h2 {
-  font-family: var(--font-primary);
   text-align: center;
 }
 
 .order-steps {
   display: flex;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 
 .order-step {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   gap: 16px;
@@ -263,9 +248,7 @@ main {
 }
 
 .order-step h3 {
-  width: 192px;
-  margin: 0;
-  color: var(--color-black);
+  max-width: 192px;
   font-family: var(--font-secondary);
   font-size: 56px;
   font-weight: 700;
@@ -276,7 +259,6 @@ main {
    7. Menu
 ========================= */
 .menu-section {
-  width: 100%;
   padding: 126px 0 152px;
   background-image: url("../assets/img/bg-menu.jpg");
   background-position: center;
@@ -287,10 +269,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
-  box-sizing: border-box;
 }
 
 .menu-section h2 {
@@ -334,7 +314,6 @@ main {
 }
 
 .dish-info h3 {
-  margin: 0;
   font-family: var(--font-secondary);
   font-size: 56px;
   font-weight: 700;
@@ -359,9 +338,6 @@ main {
 /* =========================
                8. Location
 ========================= */
-.location-section {
-  width: 100%;
-}
 
 .location-section .content-shell {
   display: flex;
@@ -371,7 +347,6 @@ main {
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
   padding-bottom: 96px;
-  box-sizing: border-box;
 }
 
 .address-info {
@@ -394,7 +369,6 @@ main {
 }
 
 address {
-  color: var(--color-black);
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -417,7 +391,6 @@ address {
      9. Footer
 ========================= */
 .page-footer {
-  width: 100%;
   padding: 48px 0;
   background-color: var(--color-dark-blue);
 }
@@ -426,10 +399,8 @@ address {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
-  box-sizing: border-box;
 }
 
 .footer-logo {
@@ -534,10 +505,7 @@ address {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  width: 100%;
-  height: 100vh;
   padding: 120px 24px 32px;
-  box-sizing: border-box;
   background-color: var(--color-dark-blue);
   transform: translateX(100%);
   transition: transform var(--transition-fast);
