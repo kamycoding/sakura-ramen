@@ -243,7 +243,7 @@ main {
 .order-steps {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
 }
 
@@ -276,14 +276,21 @@ main {
    7. Menu
 ========================= */
 .menu-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   padding: 126px 0 152px;
   background-image: url("../assets/img/bg-menu.jpg");
   background-position: center;
   background-size: cover;
+}
+
+.menu-section .content-shell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-left: var(--page-padding-x);
+  padding-right: var(--page-padding-x);
+  box-sizing: border-box;
 }
 
 .menu-section h2 {
@@ -308,8 +315,13 @@ main {
   flex-direction: row-reverse;
 }
 
-.dish-img img {
+.dish-img {
+  flex-shrink: 0;
   width: 343px;
+}
+
+.dish-img img {
+  width: 100%;
   height: auto;
 }
 
@@ -317,7 +329,8 @@ main {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 542px;
+  flex: 1;
+  min-width: 0;
 }
 
 .dish-info h3 {
@@ -325,7 +338,7 @@ main {
   font-family: var(--font-secondary);
   font-size: 56px;
   font-weight: 700;
-  line-height: 64px;
+  line-height: 1.1;
 }
 
 .price-list {
@@ -336,29 +349,29 @@ main {
 
 .price-row {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   color: var(--color-gray);
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
 }
-
 /* =========================
                8. Location
 ========================= */
 .location-section {
   width: 100%;
-  margin-bottom: 96px;
 }
 
-.location-content {
+.location-section .content-shell {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--location-gap);
-  width: 100%;
-  max-width: var(--content-max-width);
-  margin: 0 auto 96px;
+  padding-left: var(--page-padding-x);
+  padding-right: var(--page-padding-x);
+  padding-bottom: 96px;
+  box-sizing: border-box;
 }
 
 .address-info {
@@ -586,346 +599,76 @@ address {
 /* =========================
    12. Responsive Design
 ========================= */
-@media (max-width: 900px) {
+
+/* =========================
+   BREAKPOINT: 1200px
+========================= */
+@media (max-width: 1200px) {
   :root {
-    --page-padding-x: 24px;
-    --hero-title-size: 48px;
-    --hero-text-size: 20px;
-    --section-title-size: 40px;
+    --page-padding-x: 120px;
+    --section-gap: 96px;
+    --section-title-size: 64px;
+    --hero-title-size: 72px;
+    --nav-gap: 24px;
+    --order-gap: 72px;
+    --location-gap: 72px;
   }
 
-  /* =========================
-     Header
-  ========================= */
-  .header-content {
-    height: 72px;
-    padding: 20px var(--page-padding-x);
+  /* Header */
+  .main-nav a {
+    font-size: 20px;
   }
 
-  .header-actions {
-    display: none;
+  .phone-btn {
+    width: auto;
+    padding: 10px 16px;
+    font-size: 20px;
   }
 
-  .mobile-header-actions {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .mobile-phone-btn {
-    display: none;
-  }
-
-  .logo img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  /* =========================
-     Hero
-  ========================= */
-  .hero {
-    padding: 0;
-  }
-
-  .hero-content {
-    width: 100%;
-    padding: 0 var(--page-padding-x);
-  }
-
-  .hero-content h1 {
-    width: 100%;
-    font-size: clamp(32px, 11vw, 48px);
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  .hero-content p {
-    margin-top: 4px;
-    font-size: clamp(16px, 5vw, 20px);
-    line-height: 1;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  /* =========================
-                How To Order
-  ========================= */
-  .order-section {
-    width: 100%;
-  }
-
-  .order-section .content-shell {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 343px;
-    margin: 0 auto;
-    padding: 0;
-    gap: 56px;
-  }
-
-  .order-section h2 {
-    font-size: 40px;
-    line-height: 1;
-    text-align: center;
-  }
-
-  .order-steps {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 32px;
-  }
-
-  .order-step {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    gap: 16px;
-    text-align: center;
-  }
-
+  /* Order */
   .order-step img {
     width: 100px;
     height: 93px;
-    object-fit: contain;
   }
 
   .order-step h3 {
-    width: 104px;
-    margin: 0;
-    font-family: var(--font-secondary);
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 1;
-    text-align: center;
+    font-size: 44px;
   }
 
-  /* =========================
-     Menu
-  ========================= */
-  .menu-section {
-    padding: 60px var(--page-padding-x);
-  }
-
-  .menu-section h2 {
-    margin-bottom: 56px;
-    font-size: 48px;
-    line-height: 1;
-    text-align: center;
-  }
-
+  /* Menu */
   .menu-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    gap: 60px;
+    gap: 64px;
   }
 
-  .menu-item,
-  .menu-item.reverse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 343px;
-    gap: 16px;
-    text-align: left;
+  .menu-item {
+    gap: 40px;
   }
 
   .dish-img {
-    width: 300px;
-    height: 300px;
-  }
-
-  .dish-img img {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    object-fit: contain;
-  }
-
-  .dish-info {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 343px;
-    gap: 24px;
+    width: 280px;
   }
 
   .dish-info h3 {
-    margin: 0;
-    font-family: var(--font-secondary);
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1;
-  }
-
-  .price-list {
-    gap: 8px;
+    font-size: 44px;
+    line-height: 1.1;
   }
 
   .price-row {
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1;
+    font-size: 24px;
   }
 
-  /* =========================
-     Location
-  ========================= */
-  .location-section {
-    width: 100%;
-    margin-top: -16px;
-    margin-bottom: 60px;
-  }
-
-  .location-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    width: 100%;
-    padding: 0 var(--page-padding-x);
-    margin: 0 auto 56px;
-  }
-
-  .address-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .address-info h2 {
-    font-size: 48px;
-    line-height: 1;
-    text-align: center;
-  }
-
-  .wrapper-title {
-    display: grid;
-    grid-template-columns: 24px auto;
-    align-items: start;
-    justify-content: center;
-    column-gap: 16px;
-  }
-
-  .wrapper-title img {
-    width: 24px;
-    height: 32px;
-    object-fit: contain;
-  }
-
+  /* Location */
   address {
-    max-width: 202px;
-    font-size: 22px;
-    line-height: 1;
-    text-align: center;
+    font-size: 32px;
   }
 
-  .map-wrapper {
-    width: 100%;
-    height: 350px;
-    overflow: hidden;
-  }
-
-  .map-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /* =========================
-     Footer
-  ========================= */
-  .page-footer {
-    padding: 0;
-  }
-
-  .footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 78px;
-    padding: 23px 16px;
-    gap: 16px;
-  }
-
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    line-height: 0;
-  }
-
+  /* Footer */
   .footer-logo-desktop {
-    display: none;
-  }
-
-  .footer-logo-mobile {
-    display: block;
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-
-  .social-links {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    height: 40px;
   }
 
   .social-links img {
-    display: block;
-    width: 32px;
-    height: 32px;
-  }
-
-  /* =========================
-     Mobile Menu CTA
-  ========================= */
-  .mobile-menu-phone {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 175px;
-    height: 32px;
-    padding: 4px 12px;
-    margin-top: 32px;
-    color: var(--color-white);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    background-color: var(--color-wine);
-    border: 1px solid var(--color-white);
-    border-radius: 10px;
-  }
-
-  .mobile-menu-phone img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-  }
-
-  .mobile-menu-phone span {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1;
-    white-space: nowrap;
+    width: 40px;
+    height: 40px;
   }
 }
