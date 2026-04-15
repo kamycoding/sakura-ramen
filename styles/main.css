@@ -318,24 +318,31 @@ main {
   font-weight: 700;
   line-height: 1.1;
 }
-
-.price-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.price-wrapper {
+  width: clamp(320px, 42vw, 500px);
 }
 
-.price-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  column-gap: 24px;
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
   color: var(--color-gray);
   font-size: 32px;
   font-weight: 700;
   line-height: 1;
 }
-/* =========================
+
+.price-table td {
+  padding: 0;
+}
+
+.price-table tr + tr td {
+  padding-top: 16px;
+}
+
+.price-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+} /* =========================
                8. Location
 ========================= */
 
@@ -566,7 +573,7 @@ address {
 
 @media (max-width: 1280px) {
   :root {
-    --page-padding-x: 120px;
+    --page-padding-x: 140px;
     --section-gap: 96px;
     --section-title-size: 64px;
     --hero-title-size: 72px;
@@ -612,7 +619,11 @@ address {
     line-height: 1.1;
   }
 
-  .price-row {
+  .price-wrapper {
+    width: clamp(280px, 40vw, 480px);
+  }
+
+  .price-table {
     font-size: 24px;
   }
 
