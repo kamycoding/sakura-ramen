@@ -380,6 +380,7 @@ address {
   width: 100%;
   height: 600px;
   overflow: hidden;
+  padding-bottom: 96px;
 }
 
 .map-img {
@@ -644,10 +645,19 @@ address {
   }
 }
 @media (max-width: 960px) {
+  :root {
+    --page-padding-x: 140px;
+    --hero-title-size: 64px;
+    --section-title-size: 54px;
+    --hero-text-size: 20px;
+    --section-gap: 80px;
+  }
   .header-actions {
     display: none;
   }
-
+  .header-content {
+    padding-inline: 96px;
+  }
   .mobile-header-actions {
     display: flex;
     align-items: center;
@@ -675,6 +685,58 @@ address {
   .mobile-menu-phone img {
     width: 24px;
     height: 24px;
-    object-fit: contain;
+  }
+  .logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .order-step h3 {
+    font-size: 32px;
+  }
+  .order-step img {
+    width: 88px;
+  }
+  .dish-img {
+    width: 180px;
+  }
+  .dish-info h3 {
+    font-size: 32px;
+  }
+  .price-table {
+    font-size: 20px;
+  }
+  .menu-section {
+    padding: 100px 0 126px;
+  }
+  .menu-section h2 {
+    margin-bottom: 64px;
+  }
+  address {
+    font-size: 28px;
+  }
+  .wrapper-title img {
+    height: 28px;
+  }
+  .wrapper-title {
+    gap: 8px;
+  }
+  .address-info {
+    gap: 18px;
+  }
+  .location-section .content-shell {
+    padding-bottom: 64px;
+  }
+  .map-wrapper {
+    padding-bottom: 64px;
+  }
+  .footer-content {
+    padding-inline: 96px;
+  }
+  .footer-logo-desktop {
+    height: 32px;
+  }
+  .social-links img {
+    width: 32px;
+    height: 32px;
   }
 }
