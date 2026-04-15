@@ -1,10 +1,9 @@
 const hamburger = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
-const mobileMenuClose = document.querySelector(".mobile-menu-close");
 const mobileLinks = document.querySelectorAll(".mobile-menu a");
 const body = document.body;
 
-if (hamburger && mobileMenu && mobileMenuClose) {
+if (hamburger && mobileMenu) {
   const openMobileMenu = () => {
     hamburger.classList.add("active");
     mobileMenu.classList.add("open");
@@ -28,8 +27,6 @@ if (hamburger && mobileMenu && mobileMenuClose) {
       openMobileMenu();
     }
   });
-
-  mobileMenuClose.addEventListener("click", closeMobileMenu);
 
   mobileLinks.forEach((link) => {
     link.addEventListener("click", closeMobileMenu);
