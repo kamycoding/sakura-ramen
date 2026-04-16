@@ -28,7 +28,6 @@
   --nav-gap: 40px;
   --phone-gap: 8px;
   --order-gap: 96px;
-  --location-gap: 96px;
   --footer-icon-size: 48px;
   --transition-fast: 0.3s ease;
 }
@@ -48,8 +47,6 @@ body {
 
 body.no-scroll {
   overflow: hidden;
-  position: fixed;
-  width: 100%;
 }
 /* =========================
    3. Reusable Layout
@@ -192,10 +189,13 @@ main {
 }
 
 .hero-content h1 {
+  max-width: 100%;
   color: var(--color-white);
   font-size: var(--hero-title-size);
   font-weight: 700;
   line-height: 1;
+  text-wrap: balance;
+  word-break: normal;
 }
 
 .hero-content p {
@@ -337,14 +337,16 @@ main {
 }
 
 /* =========================
-               8. Location
+          8. Location
 ========================= */
+.location-section {
+  padding-bottom: 96px;
+}
 
 .location-section .content-shell {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--location-gap);
   padding-left: var(--page-padding-x);
   padding-right: var(--page-padding-x);
 }
@@ -379,7 +381,6 @@ address {
   width: 100%;
   height: 600px;
   overflow: hidden;
-  padding-bottom: 96px;
 }
 
 .map-img {
@@ -387,7 +388,6 @@ address {
   height: 100%;
   object-fit: cover;
 }
-
 /* =========================
      9. Footer
 ========================= */
@@ -680,24 +680,28 @@ address {
     border: 1px solid var(--color-white);
     border-radius: 10px;
   }
-
   .mobile-menu-phone img {
     width: 24px;
     height: 24px;
   }
+
   .logo img {
     width: 48px;
     height: 48px;
   }
+
   .order-step h3 {
     font-size: 40px;
   }
+
   .order-step img {
     width: 88px;
   }
+
   .dish-img {
     width: 200px;
   }
+
   .dish-info h3 {
     font-size: 40px;
   }
@@ -707,25 +711,31 @@ address {
   .menu-section {
     padding: 100px 0 126px;
   }
+
   .menu-section h2 {
     margin-bottom: 64px;
   }
+
   address {
     font-size: 28px;
   }
+  .location-section {
+    padding-bottom: 94px;
+  }
   .map-wrapper {
     height: 480px;
-    padding-bottom: 94px;
   }
   .wrapper-title img {
     height: 28px;
   }
+
   .wrapper-title {
     gap: 8px;
   }
   .address-info {
     gap: 18px;
   }
+
   .footer-logo-desktop {
     height: 32px;
   }
@@ -741,7 +751,6 @@ address {
     --section-title-size: 44px;
     --section-gap: 104px;
     --order-gap: 56px;
-    --location-gap: 64px;
     --address-map-gap: 56px;
   }
   .order-steps {
@@ -749,6 +758,7 @@ address {
     align-items: center;
     gap: 32px;
   }
+
   .order-step {
     padding: 0;
   }
@@ -757,7 +767,7 @@ address {
   }
   .order-step h3 {
     max-width: 160px;
-    font-size: 36px;
+    font-size: 32px;
   }
   .dish-info h3 {
     font-size: 36px;
@@ -765,9 +775,12 @@ address {
   address {
     font-size: 24px;
   }
+
+  .location-section {
+    padding-bottom: 64px;
+  }
   .map-wrapper {
     height: 420px;
-    padding-bottom: 64px;
   }
   .wrapper-title img {
     height: 24px;
@@ -781,8 +794,13 @@ address {
     --hero-text-size: 20px;
     --section-gap: 72px;
     --order-gap: 32px;
-    --location-gap: 40px;
   }
+
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+
   .menu-item,
   .menu-item.reverse {
     flex-direction: column;
@@ -802,6 +820,7 @@ address {
   }
 
   .dish-info h3 {
+    font-size: 32px;
     text-align: left;
   }
 
@@ -816,17 +835,26 @@ address {
   .price-table td:last-child {
     text-align: right;
   }
+
   address {
-    font-size: 22px;
     max-width: 220px;
+    font-size: 22px;
+    text-align: center;
   }
+
   .wrapper-title {
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
   }
+
   .wrapper-title img {
     height: 22px;
-    margin-top: 4px;
+    margin-top: 0;
   }
+
   .footer-logo-desktop {
     display: none;
   }
@@ -837,9 +865,11 @@ address {
     height: 32px;
     object-fit: contain;
   }
+
   .social-links {
     gap: 8px;
   }
+
   .page-footer {
     padding: 24px 0;
   }
@@ -848,61 +878,61 @@ address {
   :root {
     --page-padding-x: 16px;
     --hero-title-size: 40px;
+    --section-title-size: 36px;
     --hero-text-size: 20px;
     --section-gap: 64px;
     --order-gap: 24px;
-    --location-gap: 32px;
   }
-
   .header-content {
     padding: 20px 16px;
   }
-
+  .hero-content {
+    gap: 4px;
+  }
   .logo img {
     width: 32px;
     height: 32px;
   }
-
-  .phone-btn {
-    display: none;
-  }
-
-  .order-section .section-title {
-    font-size: 40px;
-  }
-
-  .menu-section .section-title,
-  .location-section .section-title {
-    font-size: 48px;
-  }
-  address {
-    text-align: center;
+  .dish-info h3 {
+    font-size: 32px;
   }
 }
 @media (max-width: 360px) {
   :root {
     --page-padding-x: 12px;
     --hero-title-size: 34px;
-    --hero-text-size: 18px;
+    --hero-text-size: 16px;
     --section-gap: 56px;
     --order-gap: 20px;
-    --location-gap: 24px;
   }
-
-  .order-section .section-title {
+  .hero-content h1 {
     font-size: 32px;
   }
-
-  .menu-section .section-title,
-  .location-section .section-title {
-    font-size: 34px;
-  }
-
   .menu-container {
     gap: 40px;
   }
 
   .dish-img {
     width: min(100%, 240px);
+  }
+}
+@media (max-width: 320px) {
+  :root {
+    --page-padding-x: 10px;
+    --hero-text-size: 16px;
+    --section-gap: 48px;
+    --order-gap: 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .dish-img {
+    width: min(100%, 220px);
+  }
+  address {
+    font-size: 20px;
+    max-width: 200px;
   }
 }
