@@ -33,33 +33,19 @@
   --nav-gap: 40px;
   --phone-gap: 8px;
 
-  --space-4: 4px;
-  --space-6: 6px;
-  --space-8: 8px;
+
   --space-10: 10px;
-  --space-12: 12px;
   --space-16: 16px;
-  --space-18: 18px;
   --space-20: 20px;
   --space-24: 24px;
   --space-32: 32px;
-  --space-40: 40px;
   --space-48: 48px;
-  --space-54: 54px;
-  --space-56: 56px;
-  --space-64: 64px;
-  --space-90: 90px;
   --space-96: 96px;
-  --space-100: 100px;
-  --space-120: 120px;
   --space-126: 126px;
   --space-152: 152px;
 
   --radius-10: 10px;
-  --radius-round: 999px;
-
   --border-thin: 1px solid var(--color-white);
-
   --logo-size: 64px;
   --phone-icon-size: 24px;
   --footer-logo-height: 48px;
@@ -77,9 +63,8 @@
   --hero-text-line-height: 1.2;
 
   --map-height: 600px;
-
+  
   --transition-fast: 0.3s ease;
-  --transition-menu: 0.25s ease-in-out;
 }
 
 /* =========================
