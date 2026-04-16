@@ -33,7 +33,6 @@
   --nav-gap: 40px;
   --phone-gap: 8px;
 
-
   --space-10: 10px;
   --space-16: 16px;
   --space-20: 20px;
@@ -63,7 +62,7 @@
   --hero-text-line-height: 1.2;
 
   --map-height: 600px;
-  
+
   --transition-fast: 0.3s ease;
 }
 
@@ -840,7 +839,7 @@ address {
 
 @media (max-width: 455px) {
   :root {
-    --page-padding-x: 16px;
+    --page-padding-x: 32px;
     --hero-title-size: 42px;
     --hero-text-size: 16px;
     --hero-content-gap: 8px;
@@ -857,7 +856,9 @@ address {
   .header-content {
     padding: 20px 16px;
   }
-
+  .footer-content {
+    padding: 0 16px;
+  }
   .hero {
     padding: 0 16px;
   }
@@ -865,7 +866,6 @@ address {
   .hero-content {
     width: 100%;
     max-width: 100%;
-    padding-inline: 0;
   }
 
   .hero-content h1 {
@@ -922,7 +922,7 @@ address {
 
 @media (max-width: 360px) {
   :root {
-    --page-padding-x: 12px;
+    --page-padding-x: 24px;
     --hero-text-size: 14px;
     --section-title-size: 32px;
     --section-gap: 56px;
@@ -972,7 +972,7 @@ address {
 
 @media (max-width: 336px) {
   :root {
-    --page-padding-x: 10px;
+    --page-padding-x: 16px;
     --hero-text-size: 14px;
     --section-title-size: 28px;
     --section-gap: 52px;
