@@ -121,6 +121,8 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
   padding: var(--header-padding-y) var(--page-padding-x);
 }
 
@@ -430,6 +432,8 @@ address {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
   padding-inline: var(--page-padding-x);
 }
 
