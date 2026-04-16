@@ -1,40 +1,37 @@
-const hamburger = document.querySelector(".hamburger");
+const menuButton = document.querySelector(".hamburger");
 const mobileMenu = document.querySelector(".mobile-menu");
 const mobileLinks = document.querySelectorAll(".mobile-menu a");
 const body = document.body;
+const desktopMediaQuery = window.matchMedia("(min-width: 961px)");
 
-if (hamburger && mobileMenu) {
-  const openMobileMenu = () => {
-    hamburger.classList.add("active");
-    mobileMenu.classList.add("open");
-    hamburger.setAttribute("aria-expanded", "true");
-    body.classList.add("no-scroll");
+if (menuButton && mobileMenu) {
+  const isMenuOpen = () => mobileMenu.classList.contains("open");
+
+  const setMenuState = (open) => {
+    mobileMenu.classList.toggle("open", open);
+    menuButton.classList.toggle("active", open);
+    menuButton.setAttribute("aria-expanded", String(open));
+    body.classList.toggle("no-scroll", open);
   };
 
-  const closeMobileMenu = () => {
-    hamburger.classList.remove("active");
-    mobileMenu.classList.remove("open");
-    hamburger.setAttribute("aria-expanded", "false");
-    body.classList.remove("no-scroll");
-  };
+  const closeMenu = () => setMenuState(false);
+  const toggleMenu = () => setMenuState(!isMenuOpen());
 
-  hamburger.addEventListener("click", () => {
-    const isOpen = mobileMenu.classList.contains("open");
-
-    if (isOpen) {
-      closeMobileMenu();
-    } else {
-      openMobileMenu();
-    }
-  });
+  menuButton.addEventListener("click", toggleMenu);
 
   mobileLinks.forEach((link) => {
-    link.addEventListener("click", closeMobileMenu);
+    link.addEventListener("click", closeMenu);
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && mobileMenu.classList.contains("open")) {
-      closeMobileMenu();
+    if (event.key === "Escape" && isMenuOpen()) {
+      closeMenu();
+    }
+  });
+
+  desktopMediaQuery.addEventListener("change", (event) => {
+    if (event.matches && isMenuOpen()) {
+      closeMenu();
     }
   });
 }
